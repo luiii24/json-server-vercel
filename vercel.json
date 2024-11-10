@@ -8,13 +8,6 @@
   "rewrites": [
     {
       "source": "/o",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-lui",
-          "value": "ukk"
-        }
-      ],
       "destination": "api/server.js"
     }
   ]
