@@ -13,7 +13,7 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/api",
       "headers": [
         {
           "key": "x-ukk",
