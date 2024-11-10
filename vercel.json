@@ -12,30 +12,10 @@
         {
           "type": "header",
           "key": "x-lui",
-          "value": "ukl"
+          "value": "ukk"
         }
       ],
       "destination": "api/server.js"
     }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "query",
-          "key": "authorized"
-        }
-      ],
-      "headers": [
-        {
-          "key": "x-authorized",
-          "value": "true"
-        }
-      ]
-    }
-  ]
-  "redirects": [
-    { "source": "/l", "destination": "https://lui.biz.id", "permanent": false }
   ]
 }
