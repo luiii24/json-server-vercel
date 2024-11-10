@@ -33,6 +33,6 @@
     }
   ]
   "redirects": [
-    { "source": "/", "destination": "lui.biz.id", "permanent": false }
+    { "source": "/l", "destination": "https://lui.biz.id", "permanent": false }
   ]
 }
