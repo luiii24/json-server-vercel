@@ -13,11 +13,17 @@
   ],
   "headers": [
     {
-      "source": "/api",
+      "source": "/o",
+      "has": [
+        {
+          "type": "query",
+          "key": "authorized"
+        }
+      ],
       "headers": [
         {
-          "key": "x-ukk",
-          "value": "linggis"
+          "key": "x-authorized",
+          "value": "true"
         }
       ]
     }
