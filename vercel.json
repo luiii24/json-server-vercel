@@ -24,7 +24,7 @@
   ],
   "headers": [
     {
-      "source": "/o",
+      "source": "/(.*)",
       "has": [
         {
           "type": "query",
