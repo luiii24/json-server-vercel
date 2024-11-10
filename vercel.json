@@ -13,13 +13,7 @@
   ],
   "headers": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "query",
-          "key": "authorized"
-        }
-      ],
+      "source": "/(.*)",
       "headers": [
         {
           "key": "x-ukk",
