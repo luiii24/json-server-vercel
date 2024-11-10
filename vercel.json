@@ -12,6 +12,13 @@
   "rewrites": [
     {
       "source": "/o",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-lui",
+          "value": "ukl"
+        }
+      ],
       "destination": "api/server.js"
     }
   ],
