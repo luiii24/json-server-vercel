@@ -9,10 +9,23 @@
     {
       "source": "/api",
       "destination": "api/server.js"
-    },
+    }
+  ],
+  "headers": [
     {
-      "source": "/",
-      "destination": "https://www.lui.biz.id"
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "authorized"
+        }
+      ],
+      "headers": [
+        {
+          "key": "x-ukk",
+          "value": "linggis"
+        }
+      ]
     }
   ]
 }
