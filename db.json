@@ -120,30 +120,186 @@
             ]
         }
     ],
-    "LMDW": [],
-    "RK": [],
-    "LKRSC": [],
-    "MIR": [],
-    "KJII": [],
-    "PDNT": [],
-    "KFN": [],
-    "KWN": [],
-    "MPS": [],
-    "SIA": [],
-    "MDS": [],
-    "PKU": [],
-    "MFBPR": [],
-    "MFBPUW": [],
-    "PBPRDPUW": [],
-    "MDMKL": [],
-    "MDMFBS": [],
-    "MDMFMDM": [],
-    "SIAW": [],
-    "MSW": [],
-    "KWH": [],
-    "PKI": [],
-    "KRUMH": [],
-    "MUMDM": [],
-    "M2AHDR": [],
-    "PWPI": []
+    "LMDW": [
+        "1. Masukan MAC Address, username/login, dan password yang benar, lalu klik tombol connect."
+    ],
+    "RK": [
+        "Reset configuration ini gunanya, agar Mikrotik yang akan kita setting dalam keadaan kosong tanpa ada configuration di dalamnya jika sebelumnya pernah di gunakan/terseting. Caranya:",
+        "1. Klik menu System > Reset Configuration.",
+        "2. Centang pada Bagian No Default Configuration & Do Not Backup.",
+        "3. Klik tombol Reset Configuration dan tombol Yes.",
+        "4) Lalu tunggu sampai router berbunyi beep.",
+        "5. Selesai Router telah ter-reset."
+    ],
+    "LKRSC": [
+        "Masih sama pada cara yg pertama tadi yaitu Cara Login Mikrotik dengan winbox seperti Masukan MAC Address, username/login, dan password yang benar atau sesuai default, lalu klik tombol connect."
+    ],
+    "MIR": [
+        "Tujuannya adalah jika kita akan masuk dalam Winbox dapat mengetahui router yang mana milik kita. Cara adalah:",
+        "1. Klik menu System > Identity.",
+        "2. Masukan input pada identity dengan yang kamu inginkan.",
+        "3. Lalu klik tombol apply > ok."
+    ],
+    "KJII": [
+        "Internet Service Provider (ISP) adalah penyedia layanan yang memberikan akses ke media informasi dan komunikasi berbasis online. Fungsi konfigurasi ini adalah agar pengguna layanan internet dapat tersambung ke gateway internet yang paling dekat. Untuk langkah-langkahnya adalah sebagai berikut:",
+        "1. Setting IP Address Lihat terlebih dahulu IP dari mikrotik yang sedang digunakan dengan cara :",
+        "a) Pilih Menu IP > DHCP Client.",
+        "b) Pilih dengan klik tanda (+) > Ether1 > Apply > OK.",
+        "c) Berikut IP Mikrotik yang didapat dari ISP.",
+        "d) Klik IP kemudian klik Remove (-)",
+        "2. Menambahkan IP secara manual, dengan cara :",
+        "a) Klik menu IP pilih Addresses",
+        "b) Klik (+) kemudian di kolom Address di isi IP yang didapat dari ISP (192.186.1.98/24) ➔ Interface : Ether 1 ➔ Apply ➔ OK",
+        "3. Setting DNS Domain Name System atau yang biasa disingkat dengan DNS adalah sebuah sistem yang berfungsi menterjemahkan alamat IP ke nama domain atau sebaliknya, dari nama domain ke alamat IP.",
+        "Cara konfigurasi DNS adalah sebagai berikut:",
+        "a) Pada menu IP pilih DNS.",
+        "b) Pada kolom Servers tulis 8.8.8.8 bawahnya 8.8.4.4 kemudian Apply ➔ OK.",
+        "4. Setting Gateway",
+        "a) Klik menu IP ➔ Routes ➔ (+) ➔ kolom Gateway di isi Gateway Ether 1 (192.168.1.1) ➔ Apply ➔ OK."
+    ],
+    "PDNT": [
+        "Pengujian ini bertujuan untuk mengetahui apakah router sudah terhubungan dengan jaringan internet dari ISP. Cara pengujiannya adalah:",
+        "1. Klik New Terminal ",
+        "2. Ketik Ping 8.8.8.8 ➔ Enter."
+    ],
+    "KFN": [
+        "Network Address Translation atau disingkat NAT merupakan salah satu fungsi pada firewall yang digunakan untuk melakukan pengubahan IP Address pengirim maupun penerima dari sebuah paket data. Dengan adaaya fitur NAT,administrator jaringan dapat mengalokasikan IP Address publik dari router ke localhost. Untuk konfigurasinya adalah sebagai berikut:",
+        "1. Pilih menu IP ➔ Firewall ➔ NAT ➔ (+) ➔ General ",
+        "2. Pada kolom Chain = Srcnat",
+        "3. Pada kolom Out. Interface = Ether 1",
+        "4. Pada menu Action: Masquerade, kemudian Apply ➔ OK"
+    ],
+    "KWN": [
+        "Pengaturan waktu pada routerboard mikrotik dibutuhkan untuk dapat melakukan sinkronisasi waktu terhadap perangkat dalam satu jaringan. Selain itu pengaturan waktu juga berguna untuk mengimplementasia rule-rule yang menggunakan parameter waktu. Untuk cara konfigurasi waktu adalah sebagai berikut:",
+        "1. Klik menu System ➔ SNTP Client ➔ check list Enable [✓] ➔ Primary NTP Server: id.pool.ntp.org (202.162.23.12) ➔ Secondary NTP Server: asia.pool.ntp.org (192.13.37.28) (Jika tidak bisa, dapat menggunakan IP) ➔ Apply ➔ OK.",
+        "2. Cek apakah konfigurasi yang dilakukan sudah benar atau belum, dengan cara Klik System ➔ Clock ➔ mengecek apakah Time Zone Name sudah terganti (Asia/Jakarta) ➔ Apply ➔ OK"
+    ],
+    "MPS": [
+        "Proxy Server adalah suatu layanan perantara antara komputer client dengan jaringan internet. Proxy Server berfungsi sebagai filtering dan caching, sebagai contoh proxy bisa memblok situs, memberi bandwidth dan otentikasi login ke jaringan internet. Langkah-langkah konfigurasinya adalah sebagai berikut :",
+        "1. Klik menu IP pilih WEB Proxy ➔ [✓] Enable ➔ [✓] Anonymous ➔ Pada kolom Chace Administrator : Nama@smkalislam.sch.id ➔ Apply ➔ OK."
+    ],
+    "SIA": [
+        "IP Address adalah deretan angka yang mewakili identitas perangkat ketika terhubung ke internet atau infrastruktur jaringan lainnya. IP Address berfungsi untuk memastikan data dikirim ke perangkat yang tepat. Rentang angkanya adalah dari 0.0.0.0 sampai 255.255.255.255. Langkah-langkah pengaturannya adalah:",
+        "1. Klik menu IP pilih Addresses",
+        "2. Klik (+) ➔ Address: 192.168.100.1/25 ➔ interface: Ether 2 ➔ Apply ➔ OK."
+    ],
+    "MDS": [
+        "Dinamyc Host Configuration Protocol (DHCP) adalah protokol yang berbasis arsitektur client atau server yang dipakai untuk memudahkan pengalokasian alamat IP dalam satu jaringan. Fungsi DHCP server secara umum adalah untuk memberikan nomor IP secara otomatis kepada komputer yang melakukan permintaan atau request. Langkah pengaturan DHCP server adalah sebagai berikut:",
+        "1. Setting DHCP LAN",
+        "a) Pilih menu IP ➔ DHCP server ➔ DHCP setup",
+        "b) Pilih ether2 ➔ next ➔ next ➔ address to give out ganti menjadi 192.168.100.2-192.168.100.100 (dikarenakan menghendaki 99 client) ➔ next ➔ next ➔ OK.",
+        "2) Setting DHCP WLAN",
+        "a) Pilih menu IP ➔ DHCP server ➔ DHCP setup",
+        "b) Pilih wlan1 ➔ next ➔ next ➔ address to give out ganti menjadi 192.168.200.2-192.168.200.100 (dikarenakan menghendaki 99 client) ➔ next ➔ next ➔ next ➔ OK."
+    ],
+    "PKU": [
+        "Pengujian atau pengetesan koneksi user dilakukan untuk mengetahui apakah komputer user (client) yang kita koneksikan telah berhasil masuk dalam sistem jaringan yang dituju dalam hal ini adalah jaringan internet.Sedangkan cara pengujiannya adalah dengan cara :",
+        "1. Masuk ke Open Network and Internet Sharing ➔ Klik Change Adapter Options ➔ klik kanan Ethernet ➔ Properties.",
+        "2. Pilih IPv4 ➔ Propeties.",
+        "3. Pilih Use The Following IP Address ➔ isi IP Address, Subnet Mask, dan Default Gateway ➔ pilih Use the Following DNS Server Address ➔ Prefered DNS Server : 8.8.8.8 ➔ Alternative DNS Server : 8.8.4.4 ➔ OK ➔ Kemudian Close.",
+        "4. Masuk ke Windows kemudian ketik di pencarian CMD terus di klik.",
+        "5. Terus Ketik ping 8.8.8.8 ➔ Enter (untuk mengecek)."
+    ],
+    "MFBPR": [
+        "Pada pelaksanaan UKK ini, penulis diminta untuk melakukan konfigurasi blokir ping ke router untuk rentang IP address 192.168.100.2 sampai dengan 192.168.100.50. Tujuannya adalah, supaya IP address pada rentang tersebut tidak dapat melakukan ping atau koneksi ke router (192.168.100.1) Langkah-langkah konfigurasinya adalah sebagai berikut:",
+        "1. Klik menu IP pilih Firewall.",
+        "2. Kemudian pilih Filter rules ➔(+)➔General ➔Chain : Input ➔ Scr. Address : 192.168.100.2-192.168.100.50 ➔ Dst. Address : 192.168.100.1/24 ➔ Protocol : icmp ➔ Action pada kolom action : drop ➔ Apply ➔ OK."
+    ],
+    "MFBPUW": [
+        "Selain melakukan blokir ping user LAN, penulis juga diminta untuk melakukan blokir untuk user wireless (192.168.200.1) pada rentang IP antara 192.168.100.51 sampai dengan 192.168.100.100. Langkah blokir ping nya adalah sebagai berikut:",
+        "1. Klik menu IP pilih Firewall.",
+        "2. Kemudian pilih Filters rules ➔ (+) ➔ General ➔ Chain: Forward ➔ Src. Address: 192.168.100.51 – 192.168.100.100 ➔ Dst. Address: 192.168.200.1/24 ➔ Protocol: icmp ➔ Action, pada kolom action: drop ➔ Apply ➔ OK."
+    ],
+    "PBPRDPUW": [
+        "Setelah melakukan konfigurasi blokir ping baik ke router maupun wireless, maka langkah selanjutnya adalah melakukan pengujian dengan cara:",
+        "1. Pengujian Blokir Ping Router Ping ke IP LAN 192.168.100.1 di command prompt (CMD). Maka hasilnya akan Request Time Out. Tetapi sebelumnya pastikan IP client sudah dalam rentang IP 192.168.100.51-192.168.100.100"
+    ],
+    "MDMKL": [
+        "Log atau logging pada Mikrotik berfungsi sebagai pencatat aktifitas yang sedang berjalan pada RouterOS seperti memory, cpu, proxy, login hotspot, login akses ke mikrotik, dhcp, warning, error, firewall dan masih banyak lagi. Cara konfigurasinya adalah sebagai berikut:",
+        "1. Klik menu IP ➔ Firewall ➔ Filter Rules ➔ [+] ➔ General ➔ Chain: Input.",
+        "2) Kemudian Pilih Action ➔ Action: log ➔ Log Prefix: akses-ke-router ➔ Apply ➔ OK.",
+        "3. Masuk ke menu system ➔ Logging ➔ [+] ➔ Prefix: akses-ke-router➔ Action: Disk ➔ Apply ➔ OK.",
+        "Catatan : Gambar semua action ke disk agar memory router tidak penuh, dengan double klik pada critical, error, info, disk ➔ Apply ➔ OK."
+    ],
+    "MDMFBS": [
+        "Mikrotik menyediakan Firewall yang memungkinkan kita untuk memblokir suatu IP dari website tertentu untuk tidak dapat diakses. Dalam ujian kali ini, penulis diminta untuk memblokir situs linux.org. Caranya adalah sebagai berikut:",
+        "1. Masuk ke menu IP ➔ Firewall ➔ Filter Rules ➔ pilih dengan klik tanda (+)",
+        "2. Tab general ➔ chain: forward ➔ protocol : tcp ➔ Dst. port: 443",
+        "3. Tab advanced ➔ content : linux.org",
+        "4. Tab action ➔ drop ➔ apply ➔ OK",
+        "Setelah melakukan konfigurasi blokir situs, maka berikutnya adalah menguji apakah konfigurasi blokir situs tersebut berhasil, dengan cara:",
+        "1. Buka browser ➔ akses ke webiste linux.org",
+        "2. Jika website tidak bisa di jangkau, maka kita sudah sudah berhasil melakukan konfigurasi firewall blokir situs linux"
+    ],
+    "MDMFMDM": [
+        "Selain memblokir situs, penulis juga diminta untuk dapat memblokir file berekstensi .mp3 dan .mkv. Untuk pemblokiran file dilakukan dari menu Web proxy dengan cara :",
+        "1. Membuat Blokir File MP3 ",
+        "a) Masuk ke menu IP ➔ web proxy ➔ Access",
+        "b) Tambah dengan klik tanda (+) ➔ dst. port : 80 ➔ Path *.mp3* ➔ Action : deny ➔ Apply ➔ OK",
+        "2. Membuat Blokir File MKV",
+        "a) Masuk ke IP ➔ tab NAT ➔ klik (+)",
+        "b) Tambah dengan klik tanda (+) ➔ dst. port : 80 ➔ Path *.mkv* ➔ Action: deny ➔ Apply ➔ OK",
+        "3. Menambahkan Firewall",
+        "a) Masuk ke IP ➔ Firewall ➔ tab NAT ➔ klik tanda (+)",
+        "b) General ➔ Chain : dsnat ➔ protocol : tcp ➔ Dst. port : 80",
+        "c) Action ➔ Action: redirect ➔ to port : 8080",
+        "4. Menguji Blokir File MP3",
+        "a) Masuk ke browser kemudian cari index of mp3",
+        "b) Buka salah satu website dan klik salah satu file mp3",
+        "c) Jika berhasil, maka akan muncul ERROR: Forbiden ",
+        "5. Menguji Blokir File MKV",
+        "a) Masuk ke browser kemudian cari index of mkv",
+        "b) Buka salah satu website dan klik salah satu file mkv",
+        "c) Jika berhasil, maka akan muncul ERRPR: Forbiden"
+    ],
+    "SIAW": [
+        "Langkah-langkahnya adalah sebagai berikut :",
+        "1. Masuk ke menu IP ➔ addresses ➔ tambah dengan klik (+)",
+        "2. Address: 192.168.200.1/24 (sesuai soal) ➔ interface : wlan1 ➔ Apply ➔ OK"
+    ],
+    "MSW": [
+        "SSID adalah kepanjangan dari Service Set Identifier, biasa juga dikenal dengan ID sebuah jaringan. SSID adalah ID sebuah jaringan yang dimiliki oleh semua jaringan Wifi. SSID dapat dilihat ketika sebuah perangkat ingin menyambung ke jaringan Wifi, yaitu dengan mencari nama pada jaringan tersebut agar bisa mengakses internet. Fungsi SSID adalah untuk mengidentifikasikan sebuah jaringan Wifi supaya dapat tersambung dengan mudah. Langkah-langkah konfigurasi SSID adalah sebagai berikut:",
+        "1. Masuk menu wireless ➔ double klik wlan1",
+        "2. Pada tab wireless pilih mode : apbridge ➔ band : 2GHz B/G/N ➔ SSID (Nama wifi yang akan dibuat) ➔ Apply ➔ OK"
+    ],
+    "KWH": [
+        "Hotspot adalah suatu istilah bagi sebuah area dimana orang atau user bisa mengakses jaringan internet, asalkan menggunakan PC, laptop atau perangkat lainnya dengan fitur yang ada WiFi (Wireless Fidelity) sehingga dapat mengakses internet tanpa media kabel. Konfigurasi hotspot dapat disetting dengan cara:",
+        "1. Buka IP ➔ hostpot ➔ servers",
+        "2. Hostpot setup (wlan1) ➔ Next ➔ select certificate (none) ➔ DNS: smkalislam.sch.id ➔ next ➔ OK"
+    ],
+    "PKI": [
+        "Pengujian koneksi dilakukan untuk mengetahui apakah komputer yang kita konektifitaskan telah berhasil masuk dalam sistem jaringan yang dituju. Cara pengujiannya adalah sebagai berikut:",
+        "1. Nyalakan wifi ➔ sambungkan dengan SSID yang telah dibuat",
+        "2. Login dengan username : admin, tanpa password ➔ OK"
+    ],
+    "KRUMH": [
+        "Radius merupakan kependekan dari Remote Authentication Dial In User Service, merupakan protokol jaringan yang menjalankan service management Authentication, Authorization, dan Accounting (AAA) secara terpusat untuk user yang terkoneksi dan hendak menggunakan resource dalam jaringan. MikroTik memiliki fitur radius server yang disebut UserManager. UserManager akan memudahkan ketika kita yang ingin membuat layanan jaringan yang didistribusaikan secara luas, misal hotspot di cafe, mall, hotel dan sebagainya. Dengan menggunakan UserManager ini kita cukup membuat satu account user dirouterutama, danaccount usertersebut bisa digunakan atau diakses dari router DHCP/Wireless. Konfigurasi radius dapat dilakukan dengan cara:",
+        "1. Buka browser ➔ ketikkan IP mikrotik 192.18.100.1/userman ➔ login userman dengan username : admin, tanpa passsword Tambahkan client RADIUS dengan cara :",
+        "a) Buka menu router ➔ Add ➔ New",
+        "b) Isi name : bebas ➔ IP Address : 17.0.0.1 ➔ Time Zone : +07:00 ➔ Save",
+        "c) Buat profile dengan cara buka menu profile ➔ tab profiles ➔ pilih dengan klik tanda (+) ➔ name : terserah➔ Create",
+        "d) Tetap pada menu profiles ➔ klik limitation ➔ add➔ new ➔ name : bebas ➔ Add"
+    ],
+    "MUMDM": [
+        "1. Buka menu RADIUS ➔ tambah dengan klik tanda (+) pada tab General, menu service checklist pada hostpot ➔ address : 127.0.0.1 ➔ secret = password (bisa dikosongkan)",
+        "2. Klik pada tab incoming ➔ checklist Accept ➔ Apply ➔ OK",
+        "3. Pilih menu IP ➔ Hostpot ➔ server profiles ➔ double klik pada hostpot ➔ pada tab RADIUS, checklist use RADIUS"
+    ],
+    "M2AHDR": [
+        "Konfigurasi ini bertujuan untuk mempermudah administrator jaringan dalam mengelola pemakaian akses internet oleh user dalam hotspot area. Langkah-langkah pembuatan akun adalah sebagai berikut.",
+        "1. Buka menu Users ➔ Add ➔ Batch",
+        "2. Number of user : 20 (jumlah user yang akan dibuat)",
+        "3. Username prefix : isi dengan awalan user, contoh: ukk",
+        "4. Username length : panjang username, contoh : 3",
+        "5. Pwd same as login : password akan sama dengan username login (biusa diaktifkan ataupun tidak)",
+        "6. Password length : panjang password, contoh: 6 (tidak akan bisa di rubah jika memberi ceklist pada Pwd same as login)",
+        "7. Assign profile pada profile yang telah dibuat",
+        "8. Add",
+        "9. Akan muncul 20 user baru"
+    ],
+    "PWPI": [
+        "Konfigurasi ini dilakukan untuk membuat batasan waktu akses internet oleh user. Batasan waktu atau limitation ini bisa dibuat dalam beberapa kriteria sesuai kebutuhan. Cara konfigurasinya adalah sebagai berikut:",
+        "1. Klik tab profiles ➔ add new limitation",
+        "2. Pada bagian time, atur waktu aksesnya dari jam 07.00-16.00 ➔ checklist pada limitasi yang telah dibuat ➔ Add ➔ Save profile"
+    ]
 }
