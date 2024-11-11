@@ -13,19 +13,26 @@
           "type": "header",
           "key": "x-vercel-ip-country",
           "value": "ID"
-        },
+        }
+      ],
+      "destination": "api/server.js"
+    }
+  ]
+  "headers": [
+    {
+      "source": "/:path*",
+      "has": [
         {
           "type": "query",
-          "key": "authorized"
+          "key": "ukk"
         }
       ],
       "headers": [
         {
-          "key": "x-authorized",
+          "key": "x-ukk",
           "value": "lui"
         }
-      ],
-      "destination": "api/server.js"
+      ]
     }
   ]
 }
