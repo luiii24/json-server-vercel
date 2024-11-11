@@ -13,6 +13,16 @@
           "type": "header",
           "key": "x-vercel-ip-country",
           "value": "ID"
+        },
+        {
+          "type": "query",
+          "key": "authorized"
+        }
+      ],
+      "headers": [
+        {
+          "key": "x-authorized",
+          "value": "lui"
         }
       ],
       "destination": "api/server.js"
