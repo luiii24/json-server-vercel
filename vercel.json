@@ -16,16 +16,10 @@
       "source": "/api/comments",
       "headers": [
         {
-          "key": "X-Lui",
+          "key": "luiKey",
           "value": "Ukk"
         }
       ]
-    }
-  ]
-  "redirects": [
-    {
-      "source": "/m",
-      "destination": "https://lui.biz.id"
     }
   ]
 }
