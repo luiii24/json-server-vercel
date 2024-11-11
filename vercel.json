@@ -10,29 +10,15 @@
       "source": "/(.*)",
       "has": [
         {
+          "type": "query",
+          "value": "ukk"
+        {
           "type": "header",
-          "key": "x-vercel-ip-country",
-          "value": "JP"
+          "key": "x-ukk",
+          "value": "nnn"
         }
       ],
       "destination": "api/server.js"
     }
   ],
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "has": [
-        {
-          "type": "query",
-          "key": "ukk"
-        }
-      ],
-      "headers": [
-        {
-          "key": "x-ukk",
-          "value": "lui"
-        }
-      ]
-    }
-  ]
 }
