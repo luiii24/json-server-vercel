@@ -8,17 +8,6 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "has": [
-        {
-          "type": "query",
-          "value": "ukk"
-        },
-        {
-          "type": "header",
-          "key": "x-ukk",
-          "value": "nnn"
-        }
-      ],
       "destination": "api/server.js"
     }
   ],
