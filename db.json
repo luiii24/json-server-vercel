@@ -1,9 +1,149 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
-  ],
-  "profile": { "name": "typicode" }
+    "daftar_isi": [
+        {
+            "judul": "1. Konfigurasi Router",
+            "langkah": [
+                {
+                    "judul": "Login Mikrotik dengan winbox",
+                    "endpoint": "LMDW"
+                },
+                {
+                    "judul": "Reset Konfigurasi",
+                    "endpoint": "RK"
+                },
+                {
+                    "judul": "Login kembali setelah reset configuration",
+                    "endpoint": "LKSRC"
+                },
+                {
+                    "judul": "Membuat Identitas Router",
+                    "endpoint": "MIR"
+                },
+                {
+                    "judul": "Konfigurasi Jaringan Internet (ISP)",
+                    "endpoint": "KJII"
+                },
+                {
+                    "judul": "Pengujian di New Terminal",
+                    "endpoint": "PDNT"
+                },
+                {
+                    "judul": "Konfigurasi Firewall NAT",
+                    "endpoint": "KFN"
+                },
+                {
+                    "judul": "Konfigurasi Waktu NTP (Network Time Protocol)",
+                    "endpoint": "KWN"
+                },
+                {
+                    "judul": "Mengatur Proxy Server",
+                    "endpoint": "MPS"
+                }
+            ]
+        },
+        {
+            "judul": "2. Konfigurasi Jaringan Lokal",
+            "langkah": [
+                {
+                    "judul": "Setting IP Address",
+                    "endpoint": "SIA"
+                },
+                {
+                    "judul": "Membuat DHCP Server",
+                    "endpoint": "MDS"
+                },
+                {
+                    "judul": "Pengujian Koneksi User",
+                    "endpoint": "PKU"
+                },
+                {
+                    "judul": "Membuat Firewall Blokir Ping Router",
+                    "endpoint": "MFBPR"
+                },
+                {
+                    "judul": "Membuat Firewall Blokir Ping User Wireless",
+                    "endpoint": "MFBPUW"
+                },
+                {
+                    "judul": "Pengujian Blokir Ping Router dan Ping User Wireless",
+                    "endpoint": "PBPRDPUW"
+                },
+                {
+                    "judul": "Membuat dan Menguji Konfigurasi Log",
+                    "endpoint": "MDMKL"
+                },
+                {
+                    "judul": "Membuat dan Menguji Firewall Blokir Situs",
+                    "endpoint": "MDMFBS"
+                },
+                {
+                    "judul": "Membuat dan Menguji File MP3 dan MKV",
+                    "endpoint": "MDMFMDM"
+                }
+            ]
+        },
+        {
+            "judul": "3. Konfigurasi Jaringan Wireless",
+            "langkah": [
+                {
+                    "judul": "Setting IP Address Wireless",
+                    "endpoint": "SIAW"
+                },
+                {
+                    "judul": "Membuat SSID Wlan1",
+                    "endpoint": "MSW"
+                },
+                {
+                    "judul": "Konfigurasi wireless Hotspot",
+                    "endpoint": "KWH"
+                },
+                {
+                    "judul": "Pengujian Koneksi Internet",
+                    "endpoint": "PKI"
+                },
+                {
+                    "judul": "Konfigurasi RADIUS User Manager Hotspot",
+                    "endpoint": "KRUMH"
+                },
+                {
+                    "judul": "Menghubungkan User Manager dengan Mikrotik",
+                    "endpoint": "MUMDM"
+                },
+                {
+                    "judul": "Membuat 20 Akun Hotspot di Radius",
+                    "endpoint": "M2AHDR"
+                },
+                {
+                    "judul": "Pembatasan Waktu Penggunaan Internet",
+                    "endpoint": "PWPI"
+                }
+            ]
+        }
+    ],
+    "LMDW": [],
+    "RK": [],
+    "LKRSC": [],
+    "MIR": [],
+    "KJII": [],
+    "PDNT": [],
+    "KFN": [],
+    "KWN": [],
+    "MPS": [],
+    "SIA": [],
+    "MDS": [],
+    "PKU": [],
+    "MFBPR": [],
+    "MFBPUW": [],
+    "PBPRDPUW": [],
+    "MDMKL": [],
+    "MDMFBS": [],
+    "MDMFMDM": [],
+    "SIAW": [],
+    "MSW": [],
+    "KWH": [],
+    "PKI": [],
+    "KRUMH": [],
+    "MUMDM": [],
+    "M2AHDR": [],
+    "PWPI": []
 }
