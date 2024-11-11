@@ -13,13 +13,19 @@
   ],
   "headers": [
     {
-      "source": "/api/(.*)",
+      "source": "/comments",
       "headers": [
         {
           "key": "X-Lui",
           "value": "Ukk"
         }
       ]
+    }
+  ]
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://lui.biz.id"
     }
   ]
 }
