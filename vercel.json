@@ -7,15 +7,19 @@
   },
   "rewrites": [
     {
-      "source": "/o",
-      "has": [
-        {
-          "type": "header",
-          "key": "x-lui",
-          "value": "ukk"
-        }
-      ],
+      "source": "/api",
       "destination": "api/server.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Lui",
+          "value": "Ukk"
+        }
+      ]
     }
   ]
 }
