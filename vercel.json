@@ -17,7 +17,7 @@
       ],
       "destination": "api/server.js"
     }
-  ]
+  ],
   "headers": [
     {
       "source": "/:path*",
