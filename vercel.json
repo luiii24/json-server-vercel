@@ -13,7 +13,7 @@
   ],
   "headers": [
     {
-      "source": "/comments",
+      "source": "/api/comments",
       "headers": [
         {
           "key": "X-Lui",
@@ -24,7 +24,7 @@
   ]
   "redirects": [
     {
-      "source": "/",
+      "source": "/m",
       "destination": "https://lui.biz.id"
     }
   ]
