@@ -12,6 +12,7 @@
         {
           "type": "query",
           "value": "ukk"
+        },
         {
           "type": "header",
           "key": "x-ukk",
